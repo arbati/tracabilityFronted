@@ -9,6 +9,7 @@ export class Shipment {
     'detail': String
     'destinationAddress': String
     'destinationZipCode': String
+    'customerReceptionDate':Date
     'customer': Customer
     'shipmentType': ShipmentType
 }

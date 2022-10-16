@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row justify-content-center" style="margin-top: 10px ;">
+
+        <div class="col-md-4 col-sm-10 position-relative">
+     
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Searching</mat-label>
+            <input matInput placeholder="Type keyword" #keyword (keyup)="searching(keyword.value)">
+            <mat-icon matSuffix>search</mat-icon>
+            <!-- mat-hint>shipment by barcode</mat-hint -->
+          </mat-form-field>
+
+        <div class="position-absolute shadow top-60 start-10 bg-light overflow-auto" style="width:90%;">
+            <mat-nav-list [hidden]="!displayResult">
+                <a mat-list-item *ngFor="let item of shipments$ | async" class="collection-item" href="" ><mat-icon></mat-icon> {{item.codebarre}}</a>
+            </mat-nav-list>
+        </div>
+    
+
+        </div>
+    </div>
+    <div class="row" style="height: 800px;">
+
+        <div class="col-12">
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
